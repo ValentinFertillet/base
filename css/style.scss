@@ -1,0 +1,402 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Open+Sans:700,600,400);
+
+//------------------------------------------------------------------
+// Colors
+//------------------------------------------------------------------
+
+
+// Global
+
+$color-transluscent: rgba(255, 255, 255, 0);
+$color-white: rgb(255, 255, 255);
+$color-grayLight: rgb(230, 230, 230);
+$color-grayMedium: rgb(43, 43, 43);
+$color-grayDark: rgb(19, 20, 24);
+
+$color-blueMedium: rgb(21, 104, 255);
+
+// Components
+
+$color-grayMedium--highlightMenuLink: rgb(43, 43, 43);
+
+
+//------------------------------------------------------------------
+// Typography
+//------------------------------------------------------------------
+
+// Font families
+
+$fontFamily-primary: "Open Sans", sans-serif;
+$fontFamily-secondary: "Droid Sans", serif;
+
+// Font sizes
+
+$fontSize-smallest: 0.354rem;
+$fontSize-smaller: 0.5rem;
+$fontSize-small: 0.707rem;
+$fontSize-base: 1rem;
+$fontSize-large: 1.414rem;
+$fontSize-larger: 1.999rem;
+$fontSize-largest: 2.827rem;
+
+// Font weights
+
+$fontWeight-base: 400;
+$fontWeight-semiBold: 600;
+$fontWeight-bold: 700;
+
+// Line heights
+
+$lineHeight-base: 160%;
+
+// Letter spacings
+
+$letterSpacing-small: -0.05rem;
+$letterSpacing-base: 0rem;
+$letterSpacing-large: 0.05rem;
+
+
+//------------------------------------------------------------------
+// Spaces
+//------------------------------------------------------------------
+
+
+$space-smaller: 0.5rem;
+$space-small: 1rem;
+$space-base: 2rem;
+$space-large: 4rem;
+
+
+//------------------------------------------------------------------
+// Sizes
+//------------------------------------------------------------------
+
+
+$size-smaller: 1rem;
+$size-small: 1.5rem;
+$size-base: 2rem;
+$size-large: 2.5rem;
+$size-larger: 3rem;
+
+$size-base--header: 4rem;
+
+//------------------------------------------------------------------
+// Utilities
+//------------------------------------------------------------------
+
+
+.u-underline {
+    text-decoration: underline;
+}
+
+
+//------------------------------------------------------------------
+// Transitions
+//------------------------------------------------------------------
+
+
+$transtion-short: 0.2s ease;
+$transtion-base: 0.5s ease;
+$transtion-long: 0.8s ease;
+
+
+//------------------------------------------------------------------
+// Components
+//------------------------------------------------------------------
+
+
+// Buttons
+
+.btn {
+    display: inline-block;
+    padding: $space-smaller $space-small;
+    font-family: $fontFamily-primary;
+    font-size: $fontSize-base;
+    border: 1px solid;
+    border-radius: 50px;
+    -webkit-transition: $transtion-short;
+	transition: $transtion-short;
+}
+
+.btn--default {
+    color: $color-blueMedium;
+    background: $color-transluscent;
+    border-color: $color-blueMedium;
+}
+
+.btn--default:hover {
+    color: $color-white;
+    background: $color-blueMedium;
+}
+
+// Layout
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 $space-base;
+}
+
+// States
+
+.is-visible {
+    display: block;
+}
+
+.is-hidden {
+    display: none;
+}
+
+// Header
+
+.header {
+    background: $color-grayLight;
+}
+
+.header div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+	min-height: $size-base--header;
+}
+
+.navbar {
+	flex: 11;
+	background: $color-grayLight;
+}
+
+.navbar.is-close {
+    -webkit-transform: translateX(0%); 
+	-ms-transform: translateX(0%); 
+	transform: translateX(0%); 
+}
+
+.navbar.is-open {
+    -webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	transform: translateX(100%); 
+}
+
+.navbar ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.navbar ul li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+	height: $size-base--header;
+}
+
+.navbar-item {
+	width: 100%;
+    padding: 0 $space-small;
+	line-height: $size-base--header;
+    color: $color-grayMedium--highlightMenuLink;
+}
+
+.navbar-logo {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	
+    svg {
+        width: $size-base;
+        height: $size-base;
+    }
+}
+
+.navbar-item:hover {
+    background: $color-grayMedium--highlightMenuLink;
+	color: $color-grayLight;
+}
+
+.navbar-item.is-active {
+    border-bottom: 2px solid $color-grayMedium--highlightMenuLink;
+}
+
+@media only screen and (max-width: 750px) {
+
+    .navbar {
+        position: fixed;
+        right: auto;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+       	padding-top: $size-base--header;
+        -webkit-transform: translateX(-100%); 
+        -ms-transform: translateX(-100%); 
+        transform: translateX(-100%); 
+        -webkit-transition: $transtion-short; 
+        transition: $transtion-short;
+    }
+    
+    .navbar ul {
+        -webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+    }
+    
+    .navbar-item {
+        padding-left: $space-base;
+    }
+	
+	.navbar-item.is-active {
+		border-bottom: none;
+		font-weight: $fontWeight-bold;
+	}
+	
+	.navbar-logo {
+        display: none;
+    }
+
+    .navbar-trigger.is-visible {
+        position: relative;
+        z-index: 1000;
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+     	
+		svg {
+			width: $size-base;
+			height: $size-base;
+		}
+    }
+}
+
+
+//------------------------------------------------------------------
+// Global
+//------------------------------------------------------------------
+
+
+* {
+    font-smoothing: antialiased;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	font-size: 14px;
+    font-weight: $fontWeight-base;
+    font-family: $fontFamily-primary;
+    letter-spacing: $letterSpacing-base;
+	line-height: $lineHeight-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $fontWeight-base;
+    font-family: $fontFamily-primary;
+    letter-spacing: $letterSpacing-large;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: $fontSize-largest;
+}
+
+h2 {
+    font-size: $fontSize-larger;
+}
+
+h3 {
+    font-size: $fontSize-large;
+}
+
+h4, 
+h5, 
+h6 {
+    font-size: $fontSize-base;
+}
+
+p {
+	font-family: $fontFamily-secondary;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+svg,
+path,
+circle,
+stroke {
+    fill: $color-blueMedium;
+}
+
+
+
+

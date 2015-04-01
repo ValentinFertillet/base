@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="Description du site"> 
+        <meta name="keywords" content="keyword, keyword, keyword"> 
+        <meta name="HandheldFriendly" content="true">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        
+        <link type="text/css" rel="stylesheet" href="./css/style.css"/>
+
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+
+        <title>Base</title>
+    </head>
+
+    <body>
+		<header class="header">
+            <div class="container">
+                <a href="#" class="navbar-trigger overlay-open is-visible" data-target="nav">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewbox="-149 235 300 300" enable-background="new -149 235 300 300" xml:space="preserve">
+                        <rect x="-149" y="289" width="300" height="30"/>
+                        <rect x="-149" y="360" width="300" height="30"/>
+                        <rect x="-149" y="431" width="300" height="30"/>
+                    </svg>
+                </a>
+                
+                <a href="#" class="navbar-trigger overlay-close is-hidden" data-target="nav">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewbox="-149 235 300 300" enable-background="new -149 235 300 300" xml:space="preserve">
+                        <rect x="-149" y="370" transform="matrix(0.7071 0.7071 -0.7071 0.7071 272.529 112.0568)" width="300" height="30"/>
+                        <rect x="-149" y="370" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -271.9432 113.471)" width="300" height="30"/>
+                    </svg>
+                </a>
+                
+                <a href="#" class="navbar-logo">
+					<!-- Placer logo ici-->
+                </a>
+                <nav class="navbar is-close" id="js-navbar" role="navigation">
+                    <ul>
+                        <li><a href="#" class="navbar-item is-active">Home</a></li>
+                        <li><a href="#" class="navbar-item">About</a></li>
+                        <li><a href="#" class="navbar-item">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="container">
+            <h1>Titre en h1</h1>
+            <h2>Titre en h2</h2>
+            <h3>Titre en h3</h3>
+            <h4>Titre en h4</h4>
+
+            <p>Medium uses a strict subset of <span class="u-underline">LESS for style generation</span>. This subset includes variables and mixins, but nothing else (no nesting, etc.). Medium's naming conventions are adapted from the work being done in the SUIT CSS framework. Which is to say, it relies on structured class names and meaningful hyphens (i.e., not using hyphens merely to separate words). This is to help work around the current limits of applying CSS to the DOM (i.e., the lack of style encapsulation) and to better communicate the relationships between classes.</p>
+
+            <a href="#" class="btn btn--default">Button</a>
+        </div>
+        
+        <script type="text/javascript" src="js/controllers/overlayController.js"></script>
+        <script type="text/javascript" src="js/model.js"></script>
+        <script type="text/javascript" src="js/ui.js"></script>
+    </body>
+</html>
